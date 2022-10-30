@@ -31,28 +31,77 @@ if(!passLength) {
     return;
   }
 }
-generatepass();
+//generatepass();
 
-//allows a path to the lowerArr index 
-var passLowerCase = confirm("Do you want your password to include lowercase values?");
-var lowerIndex = Math.floor(Math.random() * lowerArr.length);
-var userLower = lowerArr[lowerIndex];
-console.log(userLower);
 
-//allows a path to the upperArr index
-var passUpperCase = confirm("Do you want your password to include uppercase values?");
-var upperIndex = Math.floor(Math.random() * upperArr.length);
-var userUpper = upperArr[upperIndex];
-console.log(userUpper);
+//based on user input adds lowercase values
+function passLowerCase() {
+  if ( confirm("Do you want your password to include lowercase values?")) {
+    var lowerIndex = Math.floor(Math.random() * lowerArr.length);
+    var userLower = lowerArr[lowerIndex];
+    console.log(userLower);
+} else {
+  return;
+} 
+}
+//based on user input adds uppercase values
+function passUpperCase() {
+  if ( confirm("Do you want your password to include uppercase values?")) {
+    var upperIndex = Math.floor(Math.random() * upperArr.length);
+    var userUpper = upperArr[upperIndex];
+    console.log(userUpper);
+  } else {
+    return;
+  }
+}
+//based on user input adds numeric values
+function passNumberic() {
+  if ( confirm("Do you want your password to include numeric value?")) {
+     var numbersIndex = Math.floor(Math.random() * numbersArr.length);
+     var userNumber = numbersArr[numbersIndex];
+     console.log(userNumber);
+  } else {
+    return;
+  }
+}
+//based on user input adds special character values
+function passSpecial() {
+  if ( confirm("Do you want your password to include special character values?")) {
+    var specialIndex = Math.floor(Math.random() * specialArr.length);
+    var userSpecial = specialArr[specialIndex];
+    console.log(userSpecial);
+  } else {
+    return;
+  }
+}
 
-//allows a path to the numbersArr index
-var passNumberic = confirm("Do you want your password to include numeric value?");
-var numbersIndex = Math.floor(Math.random() * numbersArr.length);
-var userNumber = numbersArr[numbersIndex];
-console.log(userNumber);
 
-//allows a path to the specialArr index
-var passSpecial = confirm("Do you want your password to include special character values?");
-var specialIndex = Math.floor(Math.random() * specialArr.length);
-var userSpecial = specialArr[specialIndex];
-console.log(userSpecial);
+passLowerCase();
+passUpperCase();
+passNumberic();
+passSpecial();
+
+//MADE ALL THIS INTO A FUNCTION
+// // allows a path to the lowerArr index 
+// var passLowerCase = confirm("Do you want your password to include lowercase values?");
+// var lowerIndex = Math.floor(Math.random() * lowerArr.length);
+// var userLower = lowerArr[lowerIndex];
+// console.log(userLower);
+
+// //allows a path to the upperArr index
+// var passUpperCase = confirm("Do you want your password to include uppercase values?");
+// var upperIndex = Math.floor(Math.random() * upperArr.length);
+// var userUpper = upperArr[upperIndex];
+// console.log(userUpper);
+
+// //allows a path to the numbersArr index
+// var passNumberic = confirm("Do you want your password to include numeric value?");
+// var numbersIndex = Math.floor(Math.random() * numbersArr.length);
+// var userNumber = numbersArr[numbersIndex];
+// console.log(userNumber);
+
+// //allows a path to the specialArr index
+// var passSpecial = confirm("Do you want your password to include special character values?");
+// var specialIndex = Math.floor(Math.random() * specialArr.length);
+// var userSpecial = specialArr[specialIndex];
+// console.log(userSpecial);
