@@ -10,55 +10,45 @@ function writePassword() {
 
 }
 
-var lowerCaseArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var lowerArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-var upperCaseArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+var upperArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 var numbersArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 var specialArr = ['!', '@', '#', '$', '*', '%'];
 
 // Add event listener to generate button
+
 generateBtn.addEventListener("click", writePassword);
 
+//use onload to activate this function after an onclick button press??? i think
 
-// var passLength = prompt("Please select a password between 8 and 128 characters");
-
-// var passLength = function() {
-//   prompt("Please select a password between 8 and 128 characters");
-//   if () {
-
-//   }
-// };
+var generatepass = function() {
+  var passLength = prompt("Please select a password between 8 and 128 characters");
+ 
+if(!passLength) {
+    return;
+  }
+}
+generatepass();
 
 var passLowerCase = confirm("Do you want your password to include lowercase values?");
 
-if (confirm() === true) {
-  // program to get a random item from an array
+var lowerIndex = Math.floor(Math.random() * lowerArr.length);
+console.log(lowerIndex);
 
-function getRandomItem(arr) {
+var passUpperCase = confirm("Do you want your password to include uppercase values?");
 
-    // get random index value
-    const randomIndex = Math.floor(Math.random() * arr.length);
+var upperIndex = Math.floor(Math.random() * upperArr.length);
+console.log(upperIndex);
 
-    // get random item
-    const item = arr[randomIndex];
+var passNumberic = confirm("Do you want your password to include numeric value?");
 
-    return item;
-}
+var numberIndex = Math.floor(Math.random() * numbersArr.length);
+console.log(numberIndex);
 
-const array = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var passSpecial = confirm("Do you want your password to include special character values?");
 
-const result = getRandomItem(array);
-console.log(result);
-  
-} else {
-
-};
-
-
-
-// var passLowerCase = confirm("Do you want your password to include uppercase values?");
-// var passLowerCase = confirm("Do you want your password to include numeric value?");
-// var passLowerCase = confirm("Do you want your password to include special character values?");
-
+var specialIndex = Math.floor(Math.random() * specialArr.length);
+console.log(specialIndex);
